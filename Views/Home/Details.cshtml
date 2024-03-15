@@ -1,0 +1,42 @@
+﻿@model MathaApp.Models.User_Table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detaily</h2>
+
+<div>
+    <!--<h4>User_Table</h4>-->
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Jmeno
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            Prijmeni
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Upravit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Zpět na seznam", "Display")
+</p>

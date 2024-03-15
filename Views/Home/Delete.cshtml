@@ -1,0 +1,55 @@
+﻿@model MathaApp.Models.User_Table
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Smazat</h2>
+
+<h3>Opravdu smazat?</h3>
+<div>
+    <!--<h4>User_Table</h4>-->
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Jmeno
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            Prijmeni
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Smazat" class="btn btn-default" />
+            </div>
+        </div>
+
+
+    }
+</div>
+<div>
+    @Html.ActionLink("Zpět na seznam", "Display")
+</div>
