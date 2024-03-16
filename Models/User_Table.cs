@@ -11,12 +11,19 @@ namespace MathaApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class User_Table
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "Pole JMENO je povinné!")]
+        [Display(Name = "Jméno")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "Pole PRIJMENI je povinné!")]
+        [Display(Name = "Pøíjmení")]
         public string LastName { get; set; }
+        [Required(ErrorMessage = "Pole EMAIL je povinné!")]
+        [EmailAddress]
         public string Email { get; set; }
     }
 }
