@@ -56,7 +56,7 @@ namespace MathaApp.Controllers
         {
             db.Entry(ut).State = System.Data.Entity.EntityState.Deleted;
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Display");
         }
 
         public ActionResult Details(int id)
@@ -64,6 +64,11 @@ namespace MathaApp.Controllers
             var obj = db.User_Table.Find(id);
             return View(obj);
         }
-        
+        [HttpGet]
+        public ActionResult HomePage()
+        {            
+            return View();
+        }
+
     }
 }

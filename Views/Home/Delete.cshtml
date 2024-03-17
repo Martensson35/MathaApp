@@ -5,8 +5,9 @@
 }
 
 <h2>Smazat</h2>
-
-<h3>Opravdu smazat?</h3>
+<div>
+    <h5>Opravdu chcete tento záznam smazat?</h5>
+</div>
 <div>
     <!--<h4>User_Table</h4>-->
     <hr />
@@ -15,7 +16,7 @@
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
 
-        <dd>            
+        <dd>
             @Html.DisplayFor(model => model.FirstName)
         </dd>
 
@@ -46,8 +47,6 @@
                 <input type="submit" value="Smazat" class="btn btn-default" />
             </div>
         </div>
-
-
     }
 </div>
 <div>
